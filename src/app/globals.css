@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -12,15 +12,31 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Remove dark mode to ensure text stays black */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Force all text to be black by default */
+p, h1, h2, h3, h4, h5, h6, span, a, label, input, select, textarea {
+  color: #000000;
+}
+
+/* Only apply specific color classes when explicitly set */
+.text-gray-500, .text-gray-600, .text-gray-700 {
+  /* These specific classes will still work */
+}
+
+/* Allow button text color to be determined by their classes */
+button.text-white {
+  color: white !important;
 }

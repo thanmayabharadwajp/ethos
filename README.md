@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ethereum Transaction Optimizer
 
-## Getting Started
+An AI-powered tool to predict Ethereum network congestion and recommend optimal transaction timing and parameters.
 
-First, run the development server:
+## 🚀 Overview
 
+This hackathon project demonstrates how AI can be used to optimize Ethereum transactions by:
+
+- Monitoring real-time gas prices and network congestion
+- Predicting future congestion patterns using AI models
+- Recommending optimal transaction times and gas prices
+- Analyzing historical gas data to identify patterns
+
+## ✨ Features
+
+- **Current Network Status**: Real-time gas prices and network congestion levels
+- **AI-Powered Transaction Optimization**: Get personalized recommendations for transaction timing and gas prices
+- **Congestion Forecast**: Visualize predicted network congestion for the next 24 hours
+- **Historical Gas Analysis**: Track gas price trends with AI-generated insights
+
+## 🔧 Technical Implementation
+
+This project can connect to real Ethereum network data or simulate predictions using synthetic data. For full functionality with real-time Ethereum data, it integrates with:
+
+- Ethereum blockchain via Infura API
+- Gas price data via Etherscan API
+- Pattern detection algorithms for price prediction
+- Time-based congestion forecast models
+
+## 📋 Tech Stack
+
+- **Frontend**: Next.js with TypeScript and Tailwind CSS
+- **Data Visualization**: Recharts for interactive charts
+- **Ethereum Interaction**: ethers.js for blockchain connectivity
+- **State Management**: React Query for data fetching and caching
+
+## 🛠️ Setup & Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/ethereum-transaction-optimizer.git
+cd ethereum-transaction-optimizer
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up your API keys:
+   - Sign up for an Infura account at https://infura.io/ and create a new project to get an API key
+   - Sign up for an Etherscan account at https://etherscan.io/apis and create a new API key
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Create a `.env.local` file and add your API keys:
+```
+NEXT_PUBLIC_INFURA_API_KEY=your_infura_key
+NEXT_PUBLIC_ETHERSCAN_API_KEY=your_etherscan_key
+```
 
-## Learn More
+5. Start the development server:
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Note on API Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Without API keys, the app will fall back to synthetic data to demonstrate functionality
+- With valid Infura API key, you'll get real-time Ethereum network data
+- With valid Etherscan API key, you'll get real current gas price data (historical data is synthesized based on current values)
 
-## Deploy on Vercel
+## 📈 Future Enhancements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For a production version, we would implement:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Real AI/ML Backend**: Train models on historical Ethereum data
+- **Historical Data Storage**: Store gas price data over time for better predictions
+- **User Accounts**: Save preferences and transaction history
+- **Transaction Execution**: Allow users to directly execute transactions at optimal times
+- **Multi-Chain Support**: Extend to other EVM-compatible blockchains
+- **Mobile App**: Native mobile experience with push notifications for optimal transaction windows
+
+## 👥 Contribution
+
+This is a hackathon project, but contributions are welcome! Please feel free to submit issues or pull requests.
+
+## 📄 License
+
+MIT License - see LICENSE file for details.
+
+---
+
+Built for the 2024 Ethereum Hackathon. This is a Minimum Viable Product designed to demonstrate the concept of AI-optimized Ethereum transactions.
