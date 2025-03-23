@@ -1,5 +1,6 @@
 # Ethereum Transaction Optimizer
-
+[Slide Deck:](https://www.canva.com/design/DAGicYmWQWs/QXDoWqrnQrMxNwT9XZKFLg/edit?utm_content=DAGicYmWQWs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[Documentation:](https://docs.google.com/document/d/1MnO5Fzf2t_zKPM9GuOb0HkVvo28Yw6mKuw75ElXowYA/edit?usp=sharing)
 An AI-powered tool to predict Ethereum network congestion and recommend optimal transaction timing and parameters.
 
 ## 🚀 Overview
