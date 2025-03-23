@@ -100,7 +100,6 @@ const BlockGasPrediction: React.FC = () => {
       </div>
       
       <div className="mt-4 text-xs text-gray-600">
-        <p className="mt-1">Data sourced from Blocknative Gas Platform API</p>
         {predictions.some(p => p._isFallback) && (
           <p className="mt-1 text-amber-600">
             Some predictions are using estimated values due to limited API data.

@@ -2,9 +2,8 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import CurrentGasInfo from './components/CurrentGasInfo';
-import TransactionOptimizer from './components/TransactionOptimizer';
-import GasPriceHistory from './components/GasPriceHistory';
 import BlockGasPrediction from './components/BlockGasPrediction';
+import SmartTransactionAnalyzer from './components/SmartTransactionAnalyzer';
 
 const queryClient = new QueryClient();
 
@@ -26,8 +25,7 @@ export default function Home() {
             <div className="lg:col-span-2 space-y-6">
               <CurrentGasInfo />
               <BlockGasPrediction />
-              <TransactionOptimizer />
-              <GasPriceHistory />
+              <SmartTransactionAnalyzer />
             </div>
             <div className="space-y-6">
               <div className="bg-white shadow rounded-lg p-6">
@@ -38,8 +36,8 @@ export default function Home() {
                       <span className="font-bold text-blue-600 w-5 h-5 flex items-center justify-center">1</span>
                     </div>
                     <div>
-                      <h3 className="font-medium">Data Collection</h3>
-                      <p className="text-sm text-gray-600">Our system continuously monitors Ethereum network metrics including gas prices, pending transactions, and block times.</p>
+                      <h3 className="font-medium">Real-Time Gas Monitoring</h3>
+                      <p className="text-sm text-gray-600">Our system displays current Ethereum gas prices and analyzes network conditions to help you understand transaction costs.</p>
                     </div>
                   </div>
                   
@@ -48,8 +46,8 @@ export default function Home() {
                       <span className="font-bold text-blue-600 w-5 h-5 flex items-center justify-center">2</span>
                     </div>
                     <div>
-                      <h3 className="font-medium">Blocknative Integration</h3>
-                      <p className="text-sm text-gray-600">We use Blocknative's gas prediction API to provide accurate gas price forecasts for upcoming blocks.</p>
+                      <h3 className="font-medium">Future Block Predictions</h3>
+                      <p className="text-sm text-gray-600">Leveraging Blocknative's API, we predict gas prices for upcoming blocks with high and medium confidence levels.</p>
                     </div>
                   </div>
                   
@@ -58,8 +56,18 @@ export default function Home() {
                       <span className="font-bold text-blue-600 w-5 h-5 flex items-center justify-center">3</span>
                     </div>
                     <div>
-                      <h3 className="font-medium">Smart Recommendations</h3>
-                      <p className="text-sm text-gray-600">Get personalized guidance on when to transact and what gas price to use based on your specific needs.</p>
+                      <h3 className="font-medium">Cost Analysis in ETH & USD</h3>
+                      <p className="text-sm text-gray-600">We calculate transaction costs in both ETH and USD using real-time market rates to help you make informed decisions.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="bg-blue-100 rounded-full p-2 flex-shrink-0 mr-3">
+                      <span className="font-bold text-blue-600 w-5 h-5 flex items-center justify-center">4</span>
+                    </div>
+                    <div>
+                      <h3 className="font-medium">AI-Powered Recommendations</h3>
+                      <p className="text-sm text-gray-600">Our OpenAI integration analyzes your transaction details and provides personalized timing and gas price recommendations.</p>
                     </div>
                   </div>
                 </div>
@@ -68,13 +76,13 @@ export default function Home() {
               <div className="bg-white shadow rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4 text-gray-900">About This Project</h2>
                 <p className="text-gray-600 mb-3">
-                  This MVP was built to demonstrate how AI can optimize Ethereum transactions by predicting network congestion and recommending optimal parameters.
+                  This application uses AI to optimize Ethereum transactions by predicting network congestion and recommending optimal gas parameters.
                 </p>
                 <p className="text-gray-600 mb-3">
-                  Our AI model uses Gaussian Process regression to predict gas prices with confidence intervals, providing more accurate forecasts for upcoming blocks.
+                  We provide real-time gas price data and block predictions to help you time your transactions efficiently, with potential savings calculated in both ETH and USD.
                 </p>
                 <p className="text-gray-600 mb-3">
-                  We also integrate with Blocknative's Gas Platform API to provide accurate block-by-block gas predictions for upcoming Ethereum blocks.
+                  Our smart analysis integrates with Blocknative's Gas Platform API for block predictions and OpenAI for personalized transaction recommendations based on current market conditions.
                 </p>
                 <div className="flex justify-between mt-4 pt-4 border-t border-gray-100">
                   <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">GitHub</a>
