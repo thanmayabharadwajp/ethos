@@ -85,8 +85,8 @@ export default function Home() {
                   Our smart analysis integrates with Blocknative's Gas Platform API for block predictions and OpenAI for personalized transaction recommendations based on current market conditions.
                 </p>
                 <div className="flex justify-between mt-4 pt-4 border-t border-gray-100">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">GitHub</a>
-                  <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">Documentation</a>
+                  <a href="https://github.com/thanmayabharadwajp/ethos" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">GitHub</a>
+                  <a href="https://docs.google.com/document/d/1MnO5Fzf2t_zKPM9GuOb0HkVvo28Yw6mKuw75ElXowYA/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline font-medium">Documentation</a>
                 </div>
               </div>
             </div>
