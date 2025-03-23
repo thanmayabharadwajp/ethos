@@ -106,50 +106,6 @@ export async function estimateOptimalGasPrice(desiredConfirmationTimeMinutes: nu
   }
 }
 
-// Function to predict network congestion in the near future
-export async function predictFutureCongestion(): Promise<{
-  timeIntervals: string[],
-  congestionLevels: number[]
-}> {
-  try {
-    // This would ideally use AI/ML models trained on historical data
-    // For this MVP, we'll use a simplified approach with synthetic data
-    
-    // Get current hour
-    const currentHour = new Date().getHours();
-    
-    // Generate synthetic data for next 24 hours
-    const timeIntervals: string[] = [];
-    const congestionLevels: number[] = [];
-    
-    for (let i = 0; i < 24; i++) {
-      const hour = (currentHour + i) % 24;
-      timeIntervals.push(`${hour}:00`);
-      
-      // Simple model of congestion based on time of day
-      // - Higher during business hours (9am-5pm UTC)
-      // - Medium during evening hours
-      // - Lower during night hours
-      let baseCongestion = 0;
-      if (hour >= 9 && hour <= 17) {
-        baseCongestion = 70 + Math.random() * 30; // Business hours: 70-100
-      } else if (hour >= 18 && hour <= 22) {
-        baseCongestion = 40 + Math.random() * 30; // Evening: 40-70
-      } else {
-        baseCongestion = 20 + Math.random() * 20; // Night: 20-40
-      }
-      
-      // Add some randomness
-      congestionLevels.push(Math.min(100, Math.max(0, baseCongestion)));
-    }
-    
-    return { timeIntervals, congestionLevels };
-  } catch (error) {
-    console.error('Error predicting future congestion:', error);
-    throw error;
-  }
-}
-
 // Helper to convert gas price to human readable format in Gwei
 export function formatGasPrice(gasPrice: ethers.BigNumberish): string {
   const gasPriceBigInt = BigInt(gasPrice.toString());

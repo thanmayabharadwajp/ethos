@@ -16,6 +16,7 @@ This hackathon project demonstrates how AI can be used to optimize Ethereum tran
 - **Current Network Status**: Real-time gas prices and network congestion levels
 - **AI-Powered Transaction Optimization**: Get personalized recommendations for transaction timing and gas prices
 - **Congestion Forecast**: Visualize predicted network congestion for the next 24 hours
+- **Real-time Gas Price Chart**: Live Etherscan API integration with auto-refresh capabilities
 - **Historical Gas Analysis**: Track gas price trends with AI-generated insights
 
 ## 🔧 Technical Implementation
@@ -63,6 +64,24 @@ npm run dev
 ```
 
 6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Real-time Gas Price Chart
+
+The Gas Price History component features real-time data integration with Etherscan:
+
+- **Live API Connection**: Fetches current gas prices directly from Etherscan
+- **Auto-refresh Capability**: Configurable refresh intervals (10s, 30s, 1m, 5m)
+- **Manual Refresh**: Force refresh data at any time with a single click
+- **Connection Status**: Visual indicators for API connection status
+- **API Error Handling**: Graceful fallback to synthetic data if API limits are reached
+
+To use this feature, ensure you have added your Etherscan API key to the `.env.local` file:
+
+```
+NEXT_PUBLIC_ETHERSCAN_API_KEY=your_etherscan_key
+```
+
+The free Etherscan API has rate limits (currently 5 calls per second, up to 100,000 calls per day). The application respects these limits through reasonable refresh intervals and fallback mechanisms.
 
 ### Note on API Usage
 
